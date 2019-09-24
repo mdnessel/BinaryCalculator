@@ -68,6 +68,16 @@ public class Calculator {
     }
 
     @FXML
+    public void addOne(){
+        inputField.setText(inputField.getText() + "1");
+    }
+
+    @FXML
+    public void addZero(){
+        inputField.setText(inputField.getText() + "0");
+    }
+
+    @FXML
     public void calculate() {
         int result = 0;
         binaryStrings.add(inputField.getText());
