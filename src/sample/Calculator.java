@@ -27,6 +27,12 @@ public class Calculator {
     public Button binaryDivision;
 
     @FXML
+    public Button binarySquare;
+
+    @FXML
+    public Button binarySquareRoot;
+
+    @FXML
     public TextField inputField;
 
     @FXML
@@ -71,6 +77,20 @@ public class Calculator {
     }
 
     @FXML
+    public void square(){
+        binaryStrings.add(inputField.getText());
+        inputField.clear();
+        calculationType = "square";
+    }
+
+    @FXML
+    public void squareRoot(){
+        binaryStrings.add(inputField.getText());
+        inputField.clear();
+        calculationType = "squareRoot";
+    }
+
+    @FXML
     public void addOne(){
         inputField.setText(inputField.getText() + "1");
     }
@@ -97,6 +117,12 @@ public class Calculator {
                 break;
             case "multiplication":
                 result = numberList.get(0) * numberList.get(1);
+                break;
+            case "square":
+                result = numberList.get(0) * numberList.get(0);
+                break;
+            case "squareRoot":
+                result = (int) Math.sqrt(numberList.get(0) * numberList.get(1));
                 break;
         }
         inputField.setText("Result: " + Integer.toBinaryString(result));
