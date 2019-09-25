@@ -9,31 +9,34 @@ import java.util.ArrayList;
 
 public class Calculator {
     @FXML
-    Button binaryOne;
+    public Button binaryOne;
 
     @FXML
-    Button binaryZero;
+    public Button binaryZero;
 
     @FXML
-    Button binaryPlus;
+    public Button binaryPlus;
 
     @FXML
-    Button binaryMinus;
+    public Button binaryMinus;
 
     @FXML
-    Button binaryMultiplication;
+    public Button binaryMultiplication;
 
     @FXML
-    Button binaryDivision;
+    public Button binaryDivision;
 
     @FXML
-    TextField inputField;
+    public TextField inputField;
+
+    @FXML
+    public Button binaryClear;
 
     private BinaryConverter converter;
     private ArrayList<String> binaryStrings;
     private String calculationType;
 
-    Calculator(){
+    public Calculator(){
         this.converter = new BinaryConverter();
         this.binaryStrings = new ArrayList<>();
     }
@@ -42,28 +45,28 @@ public class Calculator {
     @FXML
     public void add(){
         binaryStrings.add(inputField.getText());
-        inputField.setText("");
+        inputField.clear();
         calculationType = "addition";
     }
 
     @FXML
     public void subtract(){
         binaryStrings.add(inputField.getText());
-        inputField.setText("");
+        inputField.clear();
         calculationType = "subtraction";
     }
 
     @FXML
     public void divide(){
         binaryStrings.add(inputField.getText());
-        inputField.setText("");
+        inputField.clear();
         calculationType = "division";
     }
 
     @FXML
     public void multiply(){
         binaryStrings.add(inputField.getText());
-        inputField.setText("");
+        inputField.clear();
         calculationType = "multiplication";
     }
 
@@ -97,5 +100,11 @@ public class Calculator {
                 break;
         }
         inputField.setText("Result: " + Integer.toBinaryString(result));
+        binaryStrings.clear();
+    }
+
+    @FXML
+    public void clear(){
+        inputField.clear();
     }
 }
