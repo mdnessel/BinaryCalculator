@@ -1,14 +1,14 @@
 # BinaryCalculator 
 The CS 495 Binary Calculator Assignment for group 1
 ## Task Distribution
-Matthew = GUI Construction 
+Matthew = Base Operations, working only on integer values 
 
-Thomas = Created base operations, testing
+Thomas = GUI creation, display for results, calculator design
 
 Edith = Square/ Square Root Functionality, created readme
 
 ## Manual - How to use the calculator
-**Important: This project is written in IntelliJ Idea and uses JDK12**
+**Important: This project is written in IntelliJ Idea and uses JDK12. This project also used JavaFX13, these libraries must be added as dependencies within IntelliJ for the project to work**
 
 In order to run the calculator application run Main inside the sample package.
 
