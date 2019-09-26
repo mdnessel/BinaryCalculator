@@ -3,6 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import java.lang.Math;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class Calculator {
     public Button binaryDivision;
 
     @FXML
-    public Button binarySquare;
+    public Button square;
 
     @FXML
     public Button binarySquareRoot;
@@ -119,10 +120,10 @@ public class Calculator {
                 result = numberList.get(0) * numberList.get(1);
                 break;
             case "square":
-                result = numberList.get(0) * numberList.get(0);
+                result = (int) Math.pow(numberList.get(0),2);
                 break;
             case "squareRoot":
-                result = (int) Math.sqrt(numberList.get(0) * numberList.get(1));
+                result = (int) Math.sqrt(numberList.get(0));
                 break;
         }
         inputField.setText("Result: " + Integer.toBinaryString(result));
