@@ -79,16 +79,14 @@ public class Calculator {
 
     @FXML
     public void square(){
-        binaryStrings.add(inputField.getText());
-        inputField.clear();
         calculationType = "square";
+        calculate();
     }
 
     @FXML
     public void squareRoot(){
-        binaryStrings.add(inputField.getText());
-        inputField.clear();
         calculationType = "squareRoot";
+        calculate();
     }
 
     @FXML
@@ -129,6 +127,7 @@ public class Calculator {
         inputField.setText("Result: " + Integer.toBinaryString(result));
         binaryStrings.clear();
     }
+
 
     @FXML
     public void clear(){
