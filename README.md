@@ -1,3 +1,6 @@
+<img width="204" alt="BinaryCalculator" src="https://user-images.githubusercontent.com/42619604/65665361-59f3fb00-e009-11e9-8b70-d7f49bdbf90b.PNG">
+
+
 # BinaryCalculator 
 The CS 495 Binary Calculator Assignment for group 1
 ## Task Distribution
